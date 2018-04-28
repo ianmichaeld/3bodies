@@ -5,7 +5,7 @@ function sketch (p) {
   let rotation = 0;
 
   p.setup = function () {
-    p.createCanvas(600, 400, p.WEBGL);
+    p.createCanvas(400, 400, p.WEBGL);
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -15,11 +15,15 @@ function sketch (p) {
   };
 
   p.draw = function () {
-    p.background(100);
-    p.stroke('black');
+    p.background('#040623');
+    let dirX = (p.mouseX / p.width - 0.5) * 2;
+    let dirY = (p.mouseY / p.height - 0.5) * 2;
+    p.noStroke();
+    p.directionalLight(250, 250, 250, -dirX, -dirY, 0.25);
+    p.ambientMaterial(250);
     p.push();
     p.rotateY(rotation);
-    p.box(100);
+    p.sphere(100);
     p.pop();
     rotation += .001
   };

@@ -13,7 +13,6 @@ class App extends Component {
         </header>
         <p className="App-intro">
           <img alt="Sun/moon/earth illuminated orbiter" src="https://images.schoolspecialty.com/images/322573_5292A4AB7FC64C3E8886339C212C5CD2.jpg" />
-          <img alt="Day to day moon phases" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpBkUdf7AHUiW0C1nZz4BJ7ZbsfJhZC4xS6k2u-L6h7M5zl0u5" />
         </p>
         <MoonPhaseView />
       </div>
