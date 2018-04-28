@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
+import P5Wrapper from 'react-p5-wrapper'
 
-
-export default function sketch (p) {
+function sketch (p) {
   let rotation = 0;
 
   p.setup = function () {
@@ -24,3 +24,9 @@ export default function sketch (p) {
     rotation += .001
   };
 };
+
+export default function MoonPhaseView() {
+    return(
+      <P5Wrapper sketch={sketch} />
+    )
+  }
