@@ -1,0 +1,18 @@
+Sample code from Processing forum:
+
+PImage earth;
+PShape globe;
+
+void setup() {
+  size(600, 600, P3D);
+  background(0);
+  earth = loadImage( "world32k.jpg");
+  globe = createShape(SPHERE, 200);
+  globe.setStroke(false);
+  globe.setTexture(earth);
+}
+
+void draw() {
+  translate(width/2, height/2);
+  shape(globe);
+}
