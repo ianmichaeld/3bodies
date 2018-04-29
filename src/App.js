@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import EarthMoonView from './EarthMoonView.js'
 import MoonPhaseView from './MoonPhaseView.js'
 
 class App extends Component {
@@ -11,10 +12,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <EarthMoonView />
+        <MoonPhaseView />
         <p className="App-intro">
           <img alt="Sun/moon/earth illuminated orbiter" src="https://images.schoolspecialty.com/images/322573_5292A4AB7FC64C3E8886339C212C5CD2.jpg" />
         </p>
-        <MoonPhaseView />
       </div>
     );
   }
