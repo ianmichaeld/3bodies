@@ -3,9 +3,11 @@ import P5Wrapper from 'react-p5-wrapper'
 
 function sketch (p) {
   let rotation = 0;
+  var image;
 
   p.setup = function () {
     p.createCanvas(400, 400, p.WEBGL);
+    image = p.loadImage('./public/full_moon_large.jpg')
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -18,9 +20,11 @@ function sketch (p) {
     p.background('#040623');
     let dirX = (p.mouseX / p.width - 0.5) * 2;
     let dirY = (p.mouseY / p.height - 0.5) * 2;
+    let dirZ = (400 / p.height - 0.5) *2
     p.noStroke();
-    p.directionalLight(250, 250, 250, -dirX, -dirY, 0.25);
+    p.directionalLight(250, 250, 250, -dirX, 0, dirZ);
     p.ambientMaterial(250);
+    // p.texture(image);
     p.push();
     p.rotateY(rotation);
     p.sphere(100);
