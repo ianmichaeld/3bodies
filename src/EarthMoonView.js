@@ -14,6 +14,10 @@ function sketch(p) {
 
   p.draw = function() {
     p.background('#040516')
+    .fill('white')
+    p.textAlign(p.CENTER)
+    p.textSize(24)
+    p.text('^  Sunlight is coming from this direction  ^', p.width / 2, 30)
     p.noStroke()
     p.push()
       // render earth
