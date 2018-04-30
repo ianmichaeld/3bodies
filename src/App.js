@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
 import EarthMoonView from './EarthMoonView.js'
 import MoonPhaseView from './MoonPhaseView.js'
+import Legend from './Legend.js'
 
 class App extends Component {
   render() {
@@ -12,14 +13,22 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <EarthMoonView />
-        <MoonPhaseView />
+        <container id="mainView">
+          <EarthMoonView />
+          <container id="phaseAndLegend">
+            <MoonPhaseView />
+            <Legend />
+          </container>
+        </container>
         <p className="App-intro">
-          <img alt="Sun/moon/earth illuminated orbiter" src="https://images.schoolspecialty.com/images/322573_5292A4AB7FC64C3E8886339C212C5CD2.jpg" />
+          <img
+            alt="Sun/moon/earth illuminated orbiter"
+            src="https://images.schoolspecialty.com/images/322573_5292A4AB7FC64C3E8886339C212C5CD2.jpg"
+          />
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#mainView {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+#phaseAndLegend {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
