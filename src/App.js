@@ -11,15 +11,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Moon Phase Simulator</h1>
+          <h1 className="App-title">Welcome to Three Bodies!</h1>
         </header>
-        <container id="mainView">
+        <span id="mainView">
           <EarthMoonView />
-          <container id="phaseAndLegend">
+          <span id="phaseAndLegend">
             <MoonPhaseView />
             <Legend />
-          </container>
-        </container>
+          </span>
+        </span>
         <p className="App-intro">
           <img
             alt="Sun/moon/earth illuminated orbiter"

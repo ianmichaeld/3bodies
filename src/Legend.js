@@ -5,8 +5,6 @@ function sketch(p) {
 
   p.setup = function() {
     p.createCanvas(500, 500)
-
-
   }
 
   p.draw = function() {
